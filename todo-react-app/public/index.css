@@ -10,9 +10,15 @@ body {
 header h1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
   font-size: xx-large;
   font-weight: bolder;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  gap: 1rem;
 }
 
 .input-text,
