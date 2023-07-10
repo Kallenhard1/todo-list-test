@@ -1,23 +1,24 @@
 import React from 'react';
 
-function ItemsList({ tasks }) {
+function ItemsList({ tasks, updateTask, deleteTask }) {
   return (
-      <div className="items-list">
-        <ul className="items">
-        <div className="items">
-          {tasks.map((task, index) => (
-            <div key={index} className="item">
-              <li>
-                <input type="checkbox" />
-                <label>{task.title}</label>
-                <button className="edit-task">Edit</button>
-                <button className="delete-task">Delete</button>
-              </li>
-            </div>
-          ))}
-        </div>
-        </ul>
-      </div>
+    <div className="items-list">
+      <ul className="items">
+        {tasks.map((task, index) => (
+          <li key={index} className="item">
+            <input type="checkbox" />
+            <input
+              type="text"
+              value={task.title}
+              onChange={(e) => updateTask(index, e.target.value)}
+            />
+            <button className="delete-task" onClick={() => deleteTask(index)}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
 

@@ -33,9 +33,6 @@ header h1 {
 }
 
 .items-list {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   gap: 1rem;
   padding: 0;
 }
@@ -47,11 +44,7 @@ header h1 {
   background: ghostwhite;
   font-size: 1.4rem;
   text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   /* transform: translateX(0); */
-  gap: 1rem;
 }
 
 .items-list li .edit-task,
@@ -62,6 +55,22 @@ header h1 {
 .items-list li:hover .edit-task,
 .items-list li:hover .delete-task {
   display: inline-block; /* Show the buttons on hover */
+}
+
+.item {
+  display: flex;
+  gap: 4px;
+}
+
+.item input {
+  display: flex;
+  width: 4rem;
+  gap: 8px;
+}
+
+.delete-task {
+  display: flex;
+  width: 64px;
 }
 
 .completed {
